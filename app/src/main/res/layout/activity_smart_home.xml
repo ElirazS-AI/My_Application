@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <Switch
+        android:id="@+id/switchAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="הפעל מזגן"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvAcStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="המזגן כבוי"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="48dp">
+
+        <Button
+            android:id="@+id/btnPrevMission4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="&lt;&lt; הקודם" />
+
+        <Button
+            android:id="@+id/btnNextMission4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="הבא &gt;&gt;" />
+    </LinearLayout>
+
+</LinearLayout>
