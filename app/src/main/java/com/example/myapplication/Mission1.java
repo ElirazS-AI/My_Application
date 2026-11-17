@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,7 @@ public class Mission1 extends AppCompatActivity {
     private TextView textView;
     private Button button3;
     private Button nextButton;
+    private Button backButton;
 
     private int count = 0;
 
@@ -29,6 +31,7 @@ public class Mission1 extends AppCompatActivity {
         button3 = findViewById(R.id.button3);
         textView = findViewById(R.id.textView);
         nextButton = findViewById(R.id.nextButton);
+        backButton = findViewById(R.id.backButton);
 
         textView.setText("count: " + count);
         button.setOnClickListener(new View.OnClickListener() {
@@ -46,10 +49,24 @@ public class Mission1 extends AppCompatActivity {
                 textView.setText("count: " + count);
             }
         });
+
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(Mission1.this, SecondActivity.class);
+                startActivity(intent);
             }
         });
+
+        if (backButton != null) {
+            backButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Mission1.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            });
+        }
     }
 }
